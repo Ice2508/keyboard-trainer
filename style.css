@@ -1,0 +1,295 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*popup*/
+
+body {
+	font-family: 'Fira Code', 'Consolas',  monospace;
+	background: lightgray;
+}
+
+.popup-name {
+    width: 360px;
+    height: 250px;
+    border: 4px solid black;
+    border-radius: 14px;
+    padding: 15px;
+    background: #fbf0d5;
+    position: fixed;
+    top: -250px;
+    left: calc(50% - 180px);
+    opacity: 0;
+    transition: top 0.4s ease, opacity 0.4s ease;
+    z-index: 1000;
+}
+
+.popup-name--active {
+    top: 30%;
+    opacity: 1;
+}
+
+.popup-name__close {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.popup-name__close:hover {
+	border: 2px solid black;
+	border-radius: 50%;
+}
+
+.input-name__label {
+	margin-top: 45px;
+	display: block;
+	font-size: 24px;
+    text-align: center;
+}
+
+.popup-name__input {
+	display: block;
+	margin: 10px auto;
+	background: #f2c37a;
+	border-radius: 5px;
+	border: none;
+	height: 34px;
+	width: 76%;
+	font-size: 24px;
+	text-align: center;
+	padding: 5px;
+}
+
+.popup-name__btn--btn {
+    background: linear-gradient(180deg, #f5bb60, #e8a33d);
+    border: 4px solid #333;
+    border-radius: 14px;
+    width: 120px;
+    height: 50px;
+    margin: 30px auto 0;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 -4px 3px #db8129;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.popup-name__btn--btn:hover {
+    background: linear-gradient(180deg, #f7c87a, #e68b2a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 3px #d07b23;
+}
+
+.popup-result {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 7px;
+}
+
+.wrapper {
+	max-width: 860px;
+	margin: auto;
+	background: #fae1ba;
+	padding: 35px;
+	min-height: 100vh;
+}
+
+.wrap {
+	min-height: calc(100vh - 70px);
+	padding: 15px;
+	color: black;
+	border: 6px solid #e58730;
+	border-radius: 12px;
+}
+
+.header__title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 58px;
+	padding: 10px;
+}
+
+.header__description {
+	font-size: 28px;
+	display: block;
+	text-align: center;
+}
+
+.nav {
+	margin-top: 30px;
+}
+
+
+
+.time {
+	height: 60px;
+	width: 60px;
+	font-size: 58px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.nav__start-btn {
+    height: 110px;
+    width: 440px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(180deg, #f2b95e, #e8a33d);
+    outline: 3px solid #333;
+    border-radius: 28px;
+    margin: 10px auto;
+    cursor: pointer;
+    display: block;
+    font-size: 58px;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 -8px 5px #db8129;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav__start-btn:hover {
+    background: linear-gradient(180deg, #f4c276, #e68b2a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -8px 5px #d07b23;
+}
+
+
+.records-section {
+	height: 400px;
+	margin-top: 10px;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.records-section__decor {
+	height: 100%;
+	width: 24%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.records-section__img {
+	height: 72%;
+}
+
+.records-section__table {
+	width: 76%;
+	border: 4px solid black;
+	height: 100%;
+	border-radius: 14px;
+}
+
+.records-section__title {
+	text-align: center;
+	font-size: 32px;
+	padding: 10px 5px;
+}
+
+/*сама игра*/
+
+.game-info {
+	height: 80px;
+	background-image: url('decor.png');
+	background-size: cover;
+	font-size: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 5px;
+	position: relative;
+	border: 4px solid #e58730;
+	padding-right: 10px;
+}
+
+.game-info__img {
+	width: 150px;
+	height: 100%;
+	position: absolute;
+	left: 10px;
+}
+
+.game-info__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.game-info__error {
+	width: 185px;
+	height: 70%;
+	border: 4px solid black;
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #dbcece;
+}
+
+.game-info__time {
+	height: 70%;
+	width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #dbcece;
+	border: 4px solid black;
+	border-radius: 7px;
+}
+
+.game-info__name {
+	height: 70%;
+	padding: 0 10px;
+    display: flex;
+	align-items: center;
+    background: #dbcece;
+	border: 4px solid black;
+	border-radius: 7px;
+}
+
+.random-text {
+	font-size: 34px;
+	margin-top: 15px;
+}
+
+.letter--active {
+	color: green;
+}
+
+.records-section__leaderboard {
+	width: 90%;
+	font-size: 24px;
+	margin: auto;
+	border-collapse: collapse;
+	font-weight: bold;
+}
+
+.records-section__leaderboard th,
+.records-section__leaderboard td {
+  border-bottom: 2px solid black;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.records-section__table--player {
+	padding-left: 30px;
+}
