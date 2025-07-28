@@ -4,12 +4,15 @@
 	box-sizing: border-box;
 }
 
-/*popup*/
 
 body {
 	font-family: 'Fira Code', 'Consolas',  monospace;
 	background: lightgray;
 }
+
+
+/*popup*/
+
 
 .popup-name {
     width: 360px;
@@ -101,7 +104,7 @@ body {
 }
 
 .wrapper {
-	max-width: 860px;
+	width: 860px;
 	margin: auto;
 	background: #fae1ba;
 	padding: 35px;
@@ -133,8 +136,6 @@ body {
 	margin-top: 30px;
 }
 
-
-
 .time {
 	height: 60px;
 	width: 60px;
@@ -148,17 +149,16 @@ body {
 
 .nav__start-btn {
     height: 110px;
-    width: 440px;
+    padding: 5px 15px;
     text-transform: uppercase;
     font-weight: bold;
     background: linear-gradient(180deg, #f2b95e, #e8a33d);
     outline: 3px solid #333;
     border-radius: 28px;
-    margin: 10px auto;
+    margin: 0 auto 110px;
     cursor: pointer;
     display: block;
     font-size: 58px;
-    padding: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 -8px 5px #db8129;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     position: relative;
@@ -292,4 +292,58 @@ body {
 
 .records-section__table--player {
 	padding-left: 30px;
+}
+
+@media (max-width: 1199px) {
+	.wrapper {
+		max-width: 780px;
+		padding: 25px;
+	}
+
+	.wrap {
+		padding: 10px;
+	}
+
+	.header__title {
+		font-size: 43px;
+		padding: 10px 10px 3px;
+	}
+
+	.header__description {
+		font-size: 24px;
+	}
+
+	.time {
+		font-size: 43px;
+	}
+
+	.nav__start-btn {
+       font-size: 43px;
+       height: 87px;
+       margin: 15px auto 15px;
+	}
+
+	.records-section {
+		height: 270px;
+		padding: 10px 60px;
+		margin-top: 5px;
+	}
+
+	.records-section__title {
+		font-size: 24px;
+		padding: 5px;
+	}
+
+	.records-section__table {
+		width: 70%;
+	}
+
+	.records-section__leaderboard {
+		font-size: 17px;
+	}
+
+	.records-section__leaderboard th,
+    .records-section__leaderboard td {
+    	padding: 5px 10px;
+    }
 }
