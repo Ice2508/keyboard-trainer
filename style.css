@@ -13,7 +13,6 @@ body {
 
 /*popup*/
 
-
 .popup-name {
     width: 360px;
     height: 250px;
@@ -345,5 +344,33 @@ body {
 	.records-section__leaderboard th,
     .records-section__leaderboard td {
     	padding: 5px 10px;
+    }
+}
+
+@media (max-width: 960px) {
+	.wrapper {
+		padding: 0;
+		font-size: 32px;
+		width: 100%;
+     }
+
+     .wrap {
+     	display: flex;
+     	justify-content: center;
+     	align-items: center;
+     }
+
+     .warn {
+     	width: 85%;
+     	height: 220px;
+     	background: black;
+     	display: flex;
+     	justify-content: center;
+     	align-items: center;
+     	color: red;
+     	padding: 15px;
+     	outline: 2px solid red;
+     	outline-offset: -8px;
+     	text-align: center;
     }
 }
