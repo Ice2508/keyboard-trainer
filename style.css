@@ -12,6 +12,9 @@ body {
 
 
 /*popup*/
+.warn {
+	display: none;
+}
 
 .popup-name {
     width: 360px;
@@ -347,7 +350,7 @@ body {
     }
 }
 
-@media (max-width: 980px), (pointer: coarse) {
+@media (max-width: 760px), (pointer: coarse) {
 	.wrapper {
 		padding: 0;
 		font-size: 32px;

@@ -12,10 +12,10 @@ const words = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    if(window.innerWidth < 980) {
+    if(window.innerWidth < 760 || window.matchMedia('(pointer: coarse)').matches) {
         gameState.wrap.innerHTML = `
         <div class="warn">
-            Приложение работает на экранах шире 980px с клавиатурой!
+            Приложение работает на экранах шире 760px с клавиатурой!
         </div>`
     }
 });
