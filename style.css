@@ -347,7 +347,7 @@ body {
     }
 }
 
-@media (max-width: 1000px) and (hover: none) {
+@media (max-width: 980px), (pointer: coarse) {
 	.wrapper {
 		padding: 0;
 		font-size: 32px;
